@@ -30,11 +30,11 @@ const gradesMid = (paz.reduce((acc, pazymiai) => acc + pazymiai, 0) / paz.length
 console.log(`Visų studentų pažangumo vidurkis: ${gradesMid}.`);
 
 //4.
+
 students.forEach((student) => {
-    const gradeSum = student.pazymiai.reduce((acc, pazymiai) => acc + pazymiai, 0);
-    const averageStudentGrade = (gradeSum / student.pazymiai.length).toFixed(2);
-    console.log(`${student.vardas} ${student.pavarde} ${averageStudentGrade}`);
-});
-
-
-
+    let suma = 0;
+    student.pazymiai.forEach((pazimys) => {
+        suma += pazimys;
+    })
+    console.log(`Studentas: ${student.vardas} ${student.pavarde} ir jo vidurkis: ${(suma / student.pazymiai.length).toFixed(2)}`);
+})
