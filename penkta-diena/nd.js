@@ -79,10 +79,10 @@ class trupmena {
 const a = new trupmena(1, 2, 3);
 console.log(a.toString());
 
-a.pridetiInt(2);
+a.pridetiInt(1);
 console.log(a.toString());
 
-a.pridetiTrupmena(5, 2, 3)
+a.pridetiTrupmena(1, 1,)
 console.log(a.toString());
 
 
